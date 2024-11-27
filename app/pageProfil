@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reçu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E3A8A; /* bg-blue-900 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 1rem;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .header .dots {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .header .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        .dot.red { background-color: #EF4444; }
+        .dot.purple { background-color: #A855F7; }
+        .dot.yellow { background-color: #FBBF24; }
+        .close-icon {
+            font-size: 1.25rem;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .receipt {
+            background-color: white;
+            color: black;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .receipt .icon-container {
+            position: absolute;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1E3A8A;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .receipt .info {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .detail .label {
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+        .detail .value {
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        .download-btn {
+            display: block;
+            width: 100%;
+            margin: 2rem 0 1rem 0;
+            padding: 0.5rem;
+            background-color: #2563EB;
+            color: white;
+            text-align: center;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .note {
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="time">9:41</span>
+            <div class="dots">
+                <div class="dot red"></div>
+                <div class="dot purple"></div>
+                <div class="dot yellow"></div>
+            </div>
+            <i class="fas fa-times close-icon"></i>
+        </div>
+        <div class="title">
+            <h1>Reçu</h1>
+        </div>
+        <div class="receipt">
+            <div class="icon-container">
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="info">Paiement effectué</div>
+            <div class="detail">
+                <div>
+                    <p class="label">Destinataire</p>
+                    <p class="value">Julie Bennett</p>
+                </div>
+                <div>
+                    <p class="label">ID Transaction</p>
+                    <p class="value">#D79004321786</p>
+                </div>
+            </div>
+            <div class="detail">
+                <div>
+                    <p class="label">Via</p>
+                    <p class="value">MTN Money</p>
+                </div>
+                <div>
+                    <p class="label">vers</p>
+                    <p class="value">Orange Money</p>
+                </div>
+            </div>
+            <div class="detail">
+                <div>
+                    <p class="label">Montant envoyé</p>
+                    <p class="value">****** F CFA</p>
+                </div>
+                <div>
+                    <p class="label">Frais</p>
+                    <p class="value">**** F CFA</p>
+                </div>
+            </div>
+            <a class="download-btn" href="#" id="download-btn">Télécharger</a>
+        </div>
+        <div class="note">
+            Cela prendra moins de 24 heures pour le traiter
+        </div>
+    </div>
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Crée un lien temporaire pour télécharger un fichier
+            const link = document.createElement('a');
+            link.href = 'chemin/vers/votre-fichier.pdf'; // Remplacez par le chemin réel du fichier
+            link.download = 'Recu_Paiement.pdf'; // Nom du fichier téléchargé
+            link.click();
+        });
+    </script>
+</body>
+</html>

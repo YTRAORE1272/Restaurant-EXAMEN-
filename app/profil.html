@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6; /* bg-gray-100 */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Profile Card Styles */
+        .profile-card {
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            padding: 1.5rem; /* p-6 */
+            width: 20rem; /* w-80 */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem; /* mb-4 */
+            color: #6b7280; /* text-gray-500 */
+        }
+
+        .time {
+            font-size: 1rem;
+        }
+
+        .status i {
+            margin-left: 0.25rem; /* space-x-1 */
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .avatar {
+            background-color: #d1d5db; /* bg-gray-300 */
+            border-radius: 50%; /* rounded-full */
+            width: 6rem; /* w-24 */
+            height: 6rem; /* h-24 */
+            margin: 0 auto 1rem; /* mb-4 */
+        }
+
+        .name {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1e3a8a; /* text-blue-900 */
+            margin-bottom: 0.5rem;
+        }
+
+        .info {
+            color: #6b7280; /* text-gray-500 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+        .details {
+            width: 100%;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f3f4f6; /* bg-gray-100 */
+            padding: 0.5rem; /* p-2 */
+            border-radius: 0.375rem; /* rounded */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        .label {
+            color: #6b7280; /* text-gray-500 */
+        }
+
+        .value {
+            color: #374151; /* text-gray-700 */
+        }
+
+        .logout {
+            display: flex;
+            align-items: center;
+            color: #ef4444; /* text-red-500 */
+            border: none;
+            background: none;
+            font-size: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        .logout i {
+            margin-left: 0.5rem; /* space-x-2 */
+        }
+    </style>
+</head>
+<body>
+        
+        <div class="content">
+            <div class="avatar"></div>
+            <h2 class="name">Bernard Lermitte</h2>
+            <p class="info">Information Personelle</p>
+            <div class="details">
+                <div class="detail">
+                    <span class="label">Identifiant Client</span>
+                    <span class="value">3024982387</span>
+                </div>
+                <div class="detail">
+                    <span class="label">Email</span>
+                    <span class="value">Berny.pro@gmail.com</span>
+                </div>
+                <div class="detail">
+                    <span class="label">Numéro Téléphone</span>
+                    <span class="value">+620932938232</span>
+                </div>
+                <div class="detail">
+                    <span class="label">Address</span>
+                    <span class="value">Gotham City...</span>
+                </div>
+            </div>
+            <button class="logout">
+                <span>Déconnexion</span>
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
